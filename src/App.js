@@ -20,6 +20,8 @@ class App extends Component {
  handleAddToCart(phone) {
       const cartItem = this.state.cart.find(x => x.id === phone.id);
       !cartItem > 0 && this.setState({cart: [...this.state.cart, phone]})
+
+      //nie działa
   }
 
 render() {
