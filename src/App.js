@@ -21,7 +21,7 @@ class App extends Component {
       const cartItem = this.state.cart.find(x => x.id === phone.id);
       !cartItem > 0 && this.setState({cart: [...this.state.cart, phone]})
 
-      //nie działa
+      //nie działa dodawanie wielokrotne
   }
 
 render() {

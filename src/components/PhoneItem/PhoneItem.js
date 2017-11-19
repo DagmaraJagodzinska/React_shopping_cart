@@ -12,7 +12,7 @@ class PhoneItem extends Component {
                     <h4>{phone.name}</h4>
                     <p>${phone.price}</p>
                     <button onClick={this.props.handleClick.bind(this, phone)}>
-                        <span className="fa fa-cart-plus"></span> Buy
+                        <span className="fa fa-cart-plus"></span> Add to Cart
                     </button>
                 </div>
             </div>
