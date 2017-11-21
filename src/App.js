@@ -18,23 +18,29 @@ class App extends Component {
 }
 
  handleAddToCart(phone) {
-      const cartItem = this.state.cart.find(x => x.id === phone.id);
-      !cartItem > 0 && this.setState({cart: [...this.state.cart, phone]})
-
-      //nie działa dodawanie wielokrotne
+    this.setState({cart: [...this.state.cart, phone]})
+    var a = this.state.cart;
+    var cartValue = a.push(phone.name);
+    console.log(cartValue + " " + phone.name);
   }
 
 render() {
     return (
-      <div className="App">
-        <Nav cart={this.state.cart}/>
-        <div className="App-main">
-            <PhoneList
-                phones={this.state.phones}
-                handleAddToCart={this.handleAddToCart}
-            ></PhoneList>
+    <div className="container">
+        <div className="row">
+            <div className="App">
+                <div className="col-md-6">
+                    <div className="App-main">
+                        <PhoneList phones={this.state.phones} handleAddToCart={this.handleAddToCart}>
+                         </PhoneList>
+                    </div>
+                </div>  
+                <div className="col-md-6">
+                    <Nav cart={this.state.cart}/>
+                </div> 
+            </div> 
         </div>
-      </div>
+    </div>
     );
   }
 }

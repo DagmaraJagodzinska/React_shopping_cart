@@ -14,7 +14,7 @@ class PhoneList extends Component {
 
     renderphoneItems(phone) {
         return (
-            <div className="col-md-6" key={phone.id}>
+            <div className="col-md-6" key={phone.name}>
             <PhoneItem
                 phone={phone}
                 handleClick={this.handleClick}

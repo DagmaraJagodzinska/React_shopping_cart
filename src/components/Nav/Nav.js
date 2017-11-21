@@ -5,8 +5,8 @@ class Nav extends Component {
         return (
             <div className="Nav">
                 <div className="Nav-item Nav-cart">
-                    <span className="fa fa-cart-plus"></span> {this.props.cart.length}
-                    {this.props.cart.name}
+                    <span className="fa fa-cart-plus"></span> 
+                    Tyle elementów w twoim super koszyku: {this.props.cart.length}
                 </div>
             </div>
         );
